@@ -1,12 +1,18 @@
-import React, { useState } from "react";
-import { Link, NavLink } from 'react-router-dom'
-import { FaHotjar } from "react-icons/fa";
-import {    
-  Bars3BottomRightIcon,
-  XMarkIcon,
-} from '@heroicons/react/24/solid'
+import React, { useContext, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { FaHotjar, FaUserCircle } from "react-icons/fa";
+import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogout = () => {
+    logOut()
+      .then()
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
   return (
     <div className="bg-gray-100 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div className="relative flex items-center justify-between">
@@ -44,13 +50,35 @@ const Header = () => {
               About us
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="/login"
+          <li className="flex items-center">
+            {user && <FaUserCircle style={{ fontSize: "2rem" ,marginRight:"10px"}}></FaUserCircle>}
+
+            {user ? (
+              <Link
+              to="/"
               className={({ isActive }) => (isActive ? "active" : "default")}
             >
-              Login
-            </NavLink>
+              <button onClick={handleLogout}
+                type="button"
+                className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+              >
+                Logout
+              </button>
+            </Link>
+            ) : (
+                <Link
+                to="/login"
+                className={({ isActive }) => (isActive ? "active" : "default")}
+              >
+                <button
+                  type="button"
+                  className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                >
+                  Login
+                </button>
+              </Link>
+            )}
+            
           </li>
         </ul>
         {/* Mobile Navbar Section */}
@@ -116,7 +144,12 @@ const Header = () => {
                         to="/login"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400"
                       >
-                        Login
+                        <button
+                          type="button"
+                          className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                        >
+                          Login
+                        </button>
                       </Link>
                     </li>
                   </ul>
