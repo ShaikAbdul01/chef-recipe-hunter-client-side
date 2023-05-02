@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SingleChef = ({ chef }) => {
   console.log(chef);
-  const { picture, name, likes, years_of_experience, num_recipes } = chef;
+  const {id, picture, name, likes, years_of_experience, num_recipes } = chef;
   return (
     <div className="bg-gray-100 p-6 rounded shadow-lg">
       <img
@@ -17,12 +18,11 @@ const SingleChef = ({ chef }) => {
       <p className="text-gray-700 font-bold">
         Numbers of recipes: {num_recipes}
       </p>
-      <p className="text-gray-700 font-bold">
-        Likes: {likes}
-      </p>
-      <button type="button" className="btn-primary w-full block">
+      <p className="text-gray-700 font-bold">Likes: {likes}</p>
+      <Link to={`/details/${id}`}><button type="button" className="btn-primary w-full block">
         View Recipes
-      </button>
+      </button></Link>
+      
     </div>
   );
 };

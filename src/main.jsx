@@ -1,23 +1,33 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
 import "./index.css";
-import Login from "./components/Login.jsx";
-import Register from "./components/Register.jsx";
-import Blog from "./components/Blog.jsx";
-import Home from "./components/Home.jsx";
-import About from "./components/About.jsx";
+
 import AuthProvider from "./AuthProvider/AuthProvider.jsx";
+import MainLayout from "./components/Layout/MainLayout.jsx";
+import Banner from "./components/Pages/Home/Banner.jsx";
+import LoginLayout from "./components/Layout/LoginLayout.jsx";
+import Login from "./components/Pages/Login.jsx";
+import Register from "./components/Pages/Register.jsx";
+import Blog from "./components/Pages/Blog.jsx";
+import About from "./components/Pages/About.jsx";
+import ChefDetailsLayout from "./components/Layout/ChefDetailsLayout.jsx";
+import Chefs from "./components/Pages/Home/Chefs.jsx";
+import ChefDetails from "./components/Pages/ChefDetails.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App></App>,
+    element: <LoginLayout></LoginLayout>,
     children: [
       {
         path: "/",
-        element: <Home></Home>,
+        element: <Banner></Banner>,
       },
       {
         path: "/login",
@@ -34,6 +44,30 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About></About>,
+      },
+    ],
+  },
+  {
+    path: "chef",
+    element: <MainLayout></MainLayout>,
+    children: [
+      {
+        path: ":id",
+        element: <Chefs></Chefs>,
+        /*  loader: ({ params }) =>
+          fetch(`http://localhost:5000/chefs/${params.id}`), */
+      },
+    ],
+  },
+  {
+    path: "details",
+    element: <ChefDetailsLayout></ChefDetailsLayout>,
+    children: [
+      {
+        path: ":id",
+        element: <ChefDetails></ChefDetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/details/${params.id}`),
       },
     ],
   },

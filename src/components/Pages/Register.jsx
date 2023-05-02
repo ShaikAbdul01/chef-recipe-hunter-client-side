@@ -1,8 +1,10 @@
 import React, { useContext, useState } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Link } from "react-router-dom";
+/* import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { updateProfile } from "firebase/auth";
-
+ */
 const Register = () => {
   const { createUser, signInWithGoogle } = useContext(AuthContext);
   const [error, setError] = useState("");

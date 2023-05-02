@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Link, NavLink } from "react-router-dom";
-import { FaHotjar, FaUserCircle } from "react-icons/fa";
+import { FaHotjar } from "react-icons/fa";
 import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
-import { AuthContext } from "../AuthProvider/AuthProvider";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { user, logOut } = useContext(AuthContext);
@@ -51,22 +51,27 @@ const Header = () => {
             </NavLink>
           </li>
           <li className="flex items-center">
-            {user && <FaUserCircle style={{ fontSize: "2rem" ,marginRight:"10px"}}></FaUserCircle>}
+            {user && (
+              <FaUserCircle
+                style={{ fontSize: "2rem", marginRight: "10px" }}
+              ></FaUserCircle>
+            )}
 
             {user ? (
               <Link
-              to="/"
-              className={({ isActive }) => (isActive ? "active" : "default")}
-            >
-              <button onClick={handleLogout}
-                type="button"
-                className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                to="/"
+                className={({ isActive }) => (isActive ? "active" : "default")}
               >
-                Logout
-              </button>
-            </Link>
+                <button
+                  onClick={handleLogout}
+                  type="button"
+                  className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                >
+                  Logout
+                </button>
+              </Link>
             ) : (
-                <Link
+              <Link
                 to="/login"
                 className={({ isActive }) => (isActive ? "active" : "default")}
               >
@@ -78,7 +83,6 @@ const Header = () => {
                 </button>
               </Link>
             )}
-            
           </li>
         </ul>
         {/* Mobile Navbar Section */}

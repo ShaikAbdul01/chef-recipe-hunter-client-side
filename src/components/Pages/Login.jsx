@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Login = () => {
-  const { loginUser,signInWithGoogle } = useContext(AuthContext);
+  const { loginUser, signInWithGoogle } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
@@ -71,9 +71,9 @@ const Login = () => {
                 className="input input-bordered"
               />
               <label className="label mb-4">
-                <a href="#" className="label-text-alt link link-hover">
+                <Link href="#" className="label-text-alt link link-hover">
                   Forgot password?
-                </a>
+                </Link>
               </label>
             </div>
             <hr />
