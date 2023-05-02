@@ -19,11 +19,13 @@ import About from "./components/Pages/About.jsx";
 import ChefDetailsLayout from "./components/Layout/ChefDetailsLayout.jsx";
 import Chefs from "./components/Pages/Home/Chefs.jsx";
 import ChefDetails from "./components/Pages/ChefDetails.jsx";
+import ErrorPage from "./components/Pages/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <LoginLayout></LoginLayout>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -50,6 +52,7 @@ const router = createBrowserRouter([
   {
     path: "chef",
     element: <MainLayout></MainLayout>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: ":id",

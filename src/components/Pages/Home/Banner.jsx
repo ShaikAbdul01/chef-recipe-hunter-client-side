@@ -46,7 +46,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <Chefs></Chefs>
+      
     </>
   );
 };
