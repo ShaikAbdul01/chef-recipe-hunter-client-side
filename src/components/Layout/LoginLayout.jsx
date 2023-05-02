@@ -1,9 +1,14 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigation } from "react-router-dom";
 import Header from "../Pages/Header";
 import Footer from "../Pages/Footer";
+import LoadingSpinner from "../Pages/LoadingSpinner";
 
 const LoginLayout = () => {
+    const navigation = useNavigation();
+    if (navigation.state === "loading") {
+      return <LoadingSpinner></LoadingSpinner>;
+    }
   return (
     <div>
       <Header></Header>

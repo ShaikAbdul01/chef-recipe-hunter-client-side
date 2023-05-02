@@ -18,7 +18,11 @@ const Recipe = ({ recipe }) => {
       <p className="mb-2 text-xl font-bold leading-none sm:text-2xl">{name}</p>
       <span className="font-bold">Ingredients: </span>
 
-      <p className="text-gray-700 mb-4">{ingredients}</p>
+      {/* <p className="text-gray-700 mb-4">{ingredients}</p> */}
+      <p className="text-gray-700 mb-4">
+        {ingredients < 500 ? { ingredients } : <>{ingredients}</>}
+      </p>
+
       <span className="font-bold">Cooking Method: </span>
       {fold ? (
         <>

@@ -28,7 +28,7 @@ const ChefDetails = () => {
           <div className=" lg:w-1/2 h-full">
             <img
               src={picture}
-              alt="book cover"
+              alt="cover"
               className="object-cover w-full  lg:h-[400px]"
             />
           </div>
