@@ -1,9 +1,12 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const { loginUser, signInWithGoogle } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/chef";
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
@@ -19,6 +22,7 @@ const Login = () => {
         console.log(loggedUser);
         setSuccess("Login Success");
         e.target.reset();
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.log(error.message);

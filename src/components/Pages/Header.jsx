@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Link, NavLink } from "react-router-dom";
-import { FaHotjar } from "react-icons/fa";
+import { FaHotjar, FaUserCircle } from "react-icons/fa";
 import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

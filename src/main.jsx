@@ -20,6 +20,7 @@ import ChefDetailsLayout from "./components/Layout/ChefDetailsLayout.jsx";
 import Chefs from "./components/Pages/Home/Chefs.jsx";
 import ChefDetails from "./components/Pages/ChefDetails.jsx";
 import ErrorPage from "./components/Pages/ErrorPage.jsx";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute.jsx";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Banner></Banner>,
+        element: <Navigate to="/chef"></Navigate>,
       },
       {
         path: "/login",
@@ -69,7 +70,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: ":id",
-        element: <ChefDetails></ChefDetails>,
+        element:<PrivateRoute><ChefDetails></ChefDetails></PrivateRoute> ,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/details/${params.id}`),
       },
