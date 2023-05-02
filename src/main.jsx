@@ -25,7 +25,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <LoginLayout></LoginLayout>,
-    errorElement:<ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -50,9 +50,9 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "chef",
+    path: "/",
     element: <MainLayout></MainLayout>,
-    errorElement:<ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: ":id",
@@ -65,6 +65,7 @@ const router = createBrowserRouter([
   {
     path: "details",
     element: <ChefDetailsLayout></ChefDetailsLayout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: ":id",

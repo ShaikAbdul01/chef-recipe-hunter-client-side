@@ -14,14 +14,14 @@ const Header = () => {
       });
   };
   return (
-    <div className="bg-gray-100 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+    <div className="bg-gray-100 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 rounded-full">
       <div className="relative flex items-center justify-between">
         {/* Logo Section */}
         <Link to="/" className="inline-flex items-center">
           <FaHotjar className="h-6 w-6 text-blue-500" />
-          <span className="ml-2 text-xl font-bold tracking-wide text-gray-800">
+          <p className="ml-2 text-xl font-bold tracking-wide text-gray-800">
             Budget Bytes
-          </span>
+          </p>
         </Link>
 
         {/* Nav Items Section */}
@@ -103,9 +103,9 @@ const Header = () => {
                   <div>
                     <Link to="/" className="inline-flex items-center">
                       <FaHotjar className="h-6 w-6 text-blue-500" />
-                      <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+                      <p className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
                         Budget Bytes
-                      </span>
+                      </p>
                     </Link>
                   </div>
                   {/* Dropdown menu close button */}
