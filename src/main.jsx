@@ -14,13 +14,11 @@ import LoginLayout from "./components/Layout/LoginLayout.jsx";
 import Login from "./components/Pages/Login.jsx";
 import Register from "./components/Pages/Register.jsx";
 import Blog from "./components/Pages/Blog.jsx";
-import About from "./components/Pages/About.jsx";
 import ChefDetailsLayout from "./components/Layout/ChefDetailsLayout.jsx";
 import Chefs from "./components/Pages/Home/Chefs.jsx";
 import ChefDetails from "./components/Pages/ChefDetails.jsx";
 import ErrorPage from "./components/Pages/ErrorPage.jsx";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute.jsx";
-
 
 const router = createBrowserRouter([
   {
@@ -44,11 +42,6 @@ const router = createBrowserRouter([
         path: "/blog",
         element: <Blog></Blog>,
       },
-      {
-        path: "/about",
-        element: <About></About>,
-      },
-      
     ],
   },
   {
@@ -59,8 +52,6 @@ const router = createBrowserRouter([
       {
         path: ":id",
         element: <Chefs></Chefs>,
-        /*  loader: ({ params }) =>
-          fetch(`http://localhost:5000/chefs/${params.id}`), */
       },
     ],
   },
@@ -71,9 +62,15 @@ const router = createBrowserRouter([
     children: [
       {
         path: ":id",
-        element:<PrivateRoute><ChefDetails></ChefDetails></PrivateRoute> ,
+        element: (
+          <PrivateRoute>
+            <ChefDetails></ChefDetails>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/details/${params.id}`),
+          fetch(
+            `https://chef-recipe-hunter-server-shaikabdul01.vercel.app/details/${params.id}`
+          ),
       },
     ],
   },

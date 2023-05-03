@@ -1,6 +1,6 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
-const About = () => {
+const Reviews = () => {
   return (
     <div className="mb-10">
       <h2 className="text-3xl font-bold mt-10">REVIEWS USER</h2>
@@ -79,4 +79,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Reviews;

@@ -39,8 +39,10 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        navigate(from, { replace: true })
         setSuccess("Login Success");
         setError("");
+
       })
       .catch((error) => {
         console.log(error.message);
