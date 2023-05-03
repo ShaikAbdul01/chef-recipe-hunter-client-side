@@ -10,7 +10,6 @@ import "./index.css";
 
 import AuthProvider from "./AuthProvider/AuthProvider.jsx";
 import MainLayout from "./components/Layout/MainLayout.jsx";
-import Banner from "./components/Pages/Home/Banner.jsx";
 import LoginLayout from "./components/Layout/LoginLayout.jsx";
 import Login from "./components/Pages/Login.jsx";
 import Register from "./components/Pages/Register.jsx";
@@ -21,6 +20,7 @@ import Chefs from "./components/Pages/Home/Chefs.jsx";
 import ChefDetails from "./components/Pages/ChefDetails.jsx";
 import ErrorPage from "./components/Pages/ErrorPage.jsx";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute.jsx";
+import Feature from "./components/Pages/Feature.jsx";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +48,7 @@ const router = createBrowserRouter([
         path: "/about",
         element: <About></About>,
       },
+      
     ],
   },
   {

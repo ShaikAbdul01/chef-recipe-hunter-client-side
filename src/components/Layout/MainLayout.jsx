@@ -4,19 +4,20 @@ import { Outlet, useNavigation } from "react-router-dom";
 import Header from "../Pages/Header";
 import Banner from "../Pages/Home/Banner";
 import Footer from "../Pages/Footer";
-import Chefs from "../Pages/Home/Chefs";
 import LoadingSpinner from "../Pages/LoadingSpinner";
+import Feature from "../Pages/Feature";
 
 const MainLayout = () => {
-    const navigation = useNavigation();
-    if (navigation.state === "loading") {
-      return <LoadingSpinner></LoadingSpinner>;
-    }
+  const navigation = useNavigation();
+  if (navigation.state === "loading") {
+    return <LoadingSpinner></LoadingSpinner>;
+  }
   return (
     <div>
       <Header></Header>
       <Banner></Banner>
       <Outlet></Outlet>
+      <Feature></Feature>
       <Footer></Footer>
     </div>
   );
