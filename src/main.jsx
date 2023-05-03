@@ -20,7 +20,7 @@ import Chefs from "./components/Pages/Home/Chefs.jsx";
 import ChefDetails from "./components/Pages/ChefDetails.jsx";
 import ErrorPage from "./components/Pages/ErrorPage.jsx";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute.jsx";
-import Feature from "./components/Pages/Feature.jsx";
+
 
 const router = createBrowserRouter([
   {
