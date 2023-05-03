@@ -10,10 +10,9 @@ const Feature = () => {
       class="relative w-full px-8 py-10 border-t border-gray-200 md:py-8 lg:py-12 "
     >
       <div class=" flex flex-col items-center justify-between h-full max-w-6xl mx-auto">
-        <h3 class="max-w-2xl px-5 mt-2 text-3xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl">
-          Our Features
-        </h3>
-        <div class="flex flex-col w-full mt-0 lg:flex-row sm:mt-10 lg:mt-20">
+        <h2 className="text-3xl font-bold mt-2">OUR FEATURES</h2>
+
+        <div class="flex flex-col w-full mt-0 lg:flex-row sm:mt-5 lg:mt-10">
           <div class="w-full max-w-md p-4 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-2/3">
             <div class="relative flex flex-col items-center justify-center w-full h-full p-20 mr-5 rounded-lg">
               <svg
@@ -40,7 +39,7 @@ const Feature = () => {
               </p>
               <a
                 href="#_"
-                class="relative flex mt-2 text-sm font-medium text-indigo-500 underline"
+                class="relative flex mt-2 text-sm font-medium text-blue-500 underline"
               >
                 Learn More
               </a>
@@ -73,7 +72,7 @@ const Feature = () => {
               </p>
               <a
                 href="#_"
-                class="relative flex mt-2 text-sm font-medium text-indigo-500 underline"
+                class="relative flex mt-2 text-sm font-medium text-blue-500 underline"
               >
                 Learn More
               </a>
@@ -106,7 +105,7 @@ const Feature = () => {
               </p>
               <a
                 href="#_"
-                class="relative flex mt-2 text-sm font-medium text-indigo-500 underline"
+                class="relative flex mt-2 text-sm font-medium text-blue-500 underline"
               >
                 Learn More
               </a>

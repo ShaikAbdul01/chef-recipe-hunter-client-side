@@ -6,6 +6,7 @@ import Banner from "../Pages/Home/Banner";
 import Footer from "../Pages/Footer";
 import LoadingSpinner from "../Pages/LoadingSpinner";
 import Feature from "../Pages/Feature";
+import About from "../Pages/About";
 
 const MainLayout = () => {
   const navigation = useNavigation();
@@ -18,6 +19,7 @@ const MainLayout = () => {
       <Banner></Banner>
       <Outlet></Outlet>
       <Feature></Feature>
+      <About></About>
       <Footer></Footer>
     </div>
   );

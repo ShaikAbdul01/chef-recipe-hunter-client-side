@@ -30,7 +30,7 @@ const Recipe = ({ recipe }) => {
             {cooking_method.substring(0, 100)}.....
           </p>
           <span
-            className="cursor-pointer text-blue-600 "
+            className="cursor-pointer text-blue-500 "
             onClick={() => setFold(!fold)}
           >
             Read More
@@ -40,7 +40,7 @@ const Recipe = ({ recipe }) => {
         <>
           <p className=" text-gray-900">{cooking_method}.....</p>
           <span
-            className="cursor-pointer text-blue-600 "
+            className="cursor-pointer text-blue-500 "
             onClick={() => setFold(!fold)}
           >
             Read Less
@@ -67,7 +67,7 @@ const Recipe = ({ recipe }) => {
           {bookmark ? (
             <span
               onClick={() => setBookmark(!bookmark) || handleClick()}
-              className="text-blue-600"
+              className="text-blue-500"
             >
               <BsBookmark></BsBookmark>
               <ToastContainer />
@@ -75,7 +75,7 @@ const Recipe = ({ recipe }) => {
           ) : (
             <span
               onClick={() => setBookmark(!bookmark)}
-              className="text-blue-600"
+              className="text-blue-500"
             >
               <BsBookmarkFill />
             </span>
