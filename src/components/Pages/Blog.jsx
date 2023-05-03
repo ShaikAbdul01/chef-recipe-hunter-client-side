@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Pdf from "react-to-pdf";
 const ref = React.createRef();
 
 const Blog = () => {
   return (
     <>
-      <Pdf targetRef={ref} filename="code-example.pdf">
+      <Pdf targetRef={ref} filename="blog.pdf">
         {({ toPdf }) => (
           <button
             onClick={toPdf}
