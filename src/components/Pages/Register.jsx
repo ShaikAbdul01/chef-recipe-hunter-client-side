@@ -6,7 +6,8 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import { updateProfile } from "firebase/auth";
  */
 const Register = () => {
-  const { createUser, signInWithGoogle } = useContext(AuthContext);
+  const { createUser, signInWithGoogle, signInWithGithub } =
+    useContext(AuthContext);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const handleRegister = (e) => {
@@ -38,9 +39,6 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
-        updateProfile(user, {
-          displayName: name + " " + photo,
-        });
         e.target.reset();
         setSuccess("User has been successfully created!!");
         setError("");
@@ -53,6 +51,20 @@ const Register = () => {
   };
   const handleGoogle = () => {
     signInWithGoogle()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        setSuccess("User has been successfully created!!");
+        setError("");
+      })
+      .catch((error) => {
+        console.log(error.message);
+        setError(error.message);
+        setSuccess("");
+      });
+  };
+  const handleGithub = () => {
+    signInWithGithub()
       .then((result) => {
         const user = result.user;
         console.log(user);
@@ -121,11 +133,6 @@ const Register = () => {
                 className="input input-bordered"
                 required
               />
-              <label className="label mb-4">
-                <a href="#" className="label-text-alt link link-hover">
-                  Forgot password?
-                </a>
-              </label>
             </div>
             <hr />
             <div className="mt-4">
@@ -152,6 +159,7 @@ const Register = () => {
                 Sign up with Google
               </button>
               <button
+                onClick={handleGithub}
                 type="button"
                 className="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mr-2 mb-2"
               >
@@ -182,7 +190,7 @@ const Register = () => {
             <p>
               Already have an account?{" "}
               <Link to="/login">
-                <span className="text-yellow-500">Login</span>
+                <span className="text-blue-500">Login</span>
               </Link>
             </p>
           </div>

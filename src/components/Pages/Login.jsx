@@ -1,6 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { Link, useLocation, useNavigate, useNavigation } from "react-router-dom";
+import {
+  Link,
+  useLocation,
+  useNavigate,
+  useNavigation,
+} from "react-router-dom";
 import LoadingSpinner from "./LoadingSpinner";
 
 const Login = () => {
@@ -8,9 +13,12 @@ const Login = () => {
   if (navigation.state === "loading") {
     return <LoadingSpinner></LoadingSpinner>;
   }
-  const { loginUser, signInWithGoogle } = useContext(AuthContext);
+  const { loginUser, signInWithGoogle, signInWithGithub, resetPassword } =
+    useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
+  const emailRef = useRef();
+
   const from = location.state?.from?.pathname || "/chef";
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -39,14 +47,49 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
-        navigate(from, { replace: true })
+        navigate(from, { replace: true });
         setSuccess("Login Success");
         setError("");
-
       })
       .catch((error) => {
         console.log(error.message);
         setError(error.message);
+        setSuccess("");
+      });
+  };
+
+  const handleGithub = () => {
+    signInWithGithub()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        navigate(from, { replace: true });
+        setSuccess("Login Success");
+        setError("");
+      })
+      .catch((error) => {
+        console.log(error.message);
+        setError(error.message);
+        setSuccess("");
+      });
+  };
+
+  const handleReset = (e) => {
+    const email = emailRef.current.value;
+    console.log(email);
+    if (!email) {
+      alert("Please provide email address to reset password");
+    }
+    resetPassword(email)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        setSuccess("Password Reset Success");
+        setError("");
+      })
+      .catch((error) => {
+        console.log(error.message);
+        // setError(error.message);
         setSuccess("");
       });
   };
@@ -68,6 +111,7 @@ const Login = () => {
                 name="email"
                 placeholder="email"
                 required
+                ref={emailRef}
                 className="input input-bordered"
               />
             </div>
@@ -82,9 +126,13 @@ const Login = () => {
                 className="input input-bordered"
               />
               <label className="label mb-4">
-                <Link href="#" className="label-text-alt link link-hover">
+                <a
+                  onClick={handleReset}
+                  href="#"
+                  className="label-text-alt link link-hover"
+                >
                   Forgot password?
-                </Link>
+                </a>
               </label>
             </div>
             <hr />
@@ -112,6 +160,7 @@ const Login = () => {
                 Sign in with Google
               </button>
               <button
+                onClick={handleGithub}
                 type="button"
                 className="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mr-2 mb-2"
               >
@@ -141,7 +190,7 @@ const Login = () => {
             <p>
               Don't have an account?{" "}
               <Link to="/register">
-                <span className="text-yellow-500">Create an account</span>
+                <span className="text-blue-500">Create an account</span>
               </Link>
             </p>
           </div>
