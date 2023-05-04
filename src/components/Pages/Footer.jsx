@@ -102,7 +102,7 @@ const Footer = () => {
           </p>
         </div>
       </footer>
-      <footer className="footer px-16 py-8 border-t bg-base-200 text-base-content border-base-300 mb-10">
+      <footer className="footer px-16 py-8 border-t bg-base-200 text-base-content border-base-300">
         <div className="items-center grid-flow-col">
           <h3 className="font-bold text-2xl">Budget Bytes</h3>
           <br />

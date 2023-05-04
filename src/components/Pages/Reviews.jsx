@@ -2,11 +2,11 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 const Reviews = () => {
   return (
-    <div className="lg:mb-10 my-container">
+    <div className=" my-container "><hr/>
       <h2 className="text-3xl font-bold mt-10 text-center">USER REVIEW</h2>
-      <Marquee className="">
-        <div className="m-16">
-          <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-10 px-16 mb-24">
+      <Marquee speed={80} className="">
+        <div className="m-16 border-4 border-x-cyan-500 hover:border-y-cyan-500">
+          <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-10 px-16 ">
             <div class="flex flex-col items-center pb-10">
               <img
                 class="w-24 h-24 mb-3 rounded-full shadow-lg"
@@ -23,8 +23,8 @@ const Reviews = () => {
             </div>
           </div>
         </div>
-        <div className="m-16">
-          <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-10 px-16 mb-24 ">
+        <div className="m-16 border-4 border-x-cyan-500 hover:border-y-cyan-500">
+          <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-10 px-16  ">
             <div class="flex flex-col items-center pb-10">
               <img
                 class="w-24 h-24 mb-3 rounded-full shadow-lg"
@@ -40,8 +40,8 @@ const Reviews = () => {
             </div>
           </div>
         </div>
-        <div className="m-16">
-          <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-10 px-16 mb-24 ">
+        <div className="m-16 border-4 border-x-cyan-500 hover:border-y-cyan-500">
+          <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-10 px-16  ">
             <div class="flex flex-col items-center pb-10">
               <img
                 class="w-24 h-24 mb-3 rounded-full shadow-lg"
@@ -57,8 +57,8 @@ const Reviews = () => {
             </div>
           </div>
         </div>
-        <div className="m-16">
-          <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-10 px-16 mb-24 ">
+        <div className="m-16 border-4 border-x-cyan-500 hover:border-y-cyan-500">
+          <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-10 px-16  ">
             <div class="flex flex-col items-center pb-10">
               <img
                 class="w-24 h-24 mb-3 rounded-full shadow-lg"
@@ -74,7 +74,7 @@ const Reviews = () => {
             </div>
           </div>
         </div>
-      </Marquee>
+      </Marquee><hr />
     </div>
   );
 };

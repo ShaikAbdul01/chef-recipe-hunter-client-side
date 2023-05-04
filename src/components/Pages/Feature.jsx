@@ -27,11 +27,11 @@ const Feature = () => {
                 </g>
               </svg>
 
-              <div className="relative w-24 h-24">
+              <div className="relative w-full h-full mb-4">
                 <Lottie animationData={a} loop={true} />
               </div>
 
-              <h4 class="relative mt- text-base font-bold">
+              <h4 class="relative md:mt-2 text-base font-bold">
                 World’s best Chef
               </h4>
               <p class="relative mt-2 text-sm text-center text-gray-600">
@@ -59,7 +59,7 @@ const Feature = () => {
                   </g>
                 </g>
               </svg>
-              <div className="relative w-24 h-24">
+              <div className="relative w-full h-full ">
                 <Lottie animationData={b} loop={true} />
               </div>
               <h4 class="relative md:mt-2 text-base font-bold">
@@ -90,7 +90,7 @@ const Feature = () => {
                   </g>
                 </g>
               </svg>
-              <div className="relative w-24 h-24">
+              <div className="relative w-full h-full mb-4">
                 <Lottie animationData={c} loop={true} />
               </div>
               <h4 class="relative md:mt-2 text-lg font-bold">

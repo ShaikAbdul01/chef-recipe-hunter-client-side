@@ -3,7 +3,7 @@ import React from "react";
 import { Blocks } from "react-loader-spinner";
 const LoadingSpinner = () => {
   return (
-    <div className="flex justify-center items-center h-[calc(100vh-66px)">
+    <div className="flex justify-center items-center lg:m-[200px]">
       <Blocks
         visible={true}
         height="80"

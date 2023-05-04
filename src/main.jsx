@@ -18,6 +18,7 @@ import Chefs from "./components/Pages/Home/Chefs.jsx";
 import ChefDetails from "./components/Pages/ChefDetails.jsx";
 import ErrorPage from "./components/Pages/ErrorPage.jsx";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute.jsx";
+import LoadingSpinner from "./components/Pages/LoadingSpinner";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog></Blog>,
+      },
+      {
+        path: "/loader",
+        element: <LoadingSpinner></LoadingSpinner>,
       },
     ],
   },

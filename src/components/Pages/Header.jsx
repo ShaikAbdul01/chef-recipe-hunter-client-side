@@ -3,7 +3,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Link, NavLink } from "react-router-dom";
 import { FaHotjar, FaUserCircle } from "react-icons/fa";
 import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
-
+import a from "../../assets/1.png"
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { user, logOut } = useContext(AuthContext);
@@ -20,7 +20,8 @@ const Header = () => {
       <div className="relative flex items-center justify-between">
         {/* Logo Section */}
         <Link to="/" className="inline-flex items-center">
-          <FaHotjar className="h-6 w-6 text-blue-500" />
+          {/* <FaHotjar className="h-6 w-6 text-blue-500" /> */}
+          <img className="w-14 h-14" src={a} alt="" srcset="" />
           <p className="ml-2 text-xl font-bold tracking-wide text-gray-800">
             Budget Bytes
           </p>
