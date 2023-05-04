@@ -58,7 +58,7 @@ const ChefDetails = () => {
 
       <div className="my-container">
         <div className="mb-8">
-          <h2 className="text-3xl font-bold">Chef Recipes</h2>
+          <h2 className="text-3xl font-bold text-center">Chef Recipes</h2>
         </div>
         <div className="product-container">
           {detailsData.recipes.map((recipe) => (

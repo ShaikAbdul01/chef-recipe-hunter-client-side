@@ -97,10 +97,10 @@ const Login = () => {
     <>
       <form
         onSubmit={handleLogin}
-        className="hero min-h-screen bg-base-200 mt-10"
+        className=" my-container hero min-h-screen bg-base-200 mt-10 mx-auto"
       >
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100  my-8">
-          <h1 className="text-2xl font-bold">Login</h1>
+        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100  my-8 ">
+          <h1 className="text-2xl font-bold text-center mt-4">Login</h1>
           <div className="card-body">
             <div className="form-control">
               <label className="label">
@@ -136,11 +136,11 @@ const Login = () => {
               </label>
             </div>
             <hr />
-            <div className="mt-4">
+            <div className="mt-4 ml-16">
               <button
                 onClick={handleGoogle}
                 type="button"
-                className="text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2"
+                className="mx-auto text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2"
               >
                 <svg
                   className="w-4 h-4 mr-2 -ml-1"

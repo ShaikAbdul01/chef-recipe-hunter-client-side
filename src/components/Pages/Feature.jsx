@@ -7,13 +7,13 @@ const Feature = () => {
   return (
     <div
       id="features"
-      class="relative w-full px-8 py-10 border-t border-gray-200 md:py-8 lg:py-12 "
+      class="my-container relative w-full px-8 py-10 border-t border-gray-200 md:py-8 lg:py-12 "
     >
       <div class=" flex flex-col items-center justify-between h-full max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold mt-2">OUR FEATURES</h2>
 
         <div class="flex flex-col w-full mt-0 lg:flex-row sm:mt-5 lg:mt-10">
-          <div class="w-full max-w-md p-4 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-2/3">
+          <div class="w-full max-w-md p-4 mx-auto mb-0 sm:mb-8 lg:mb-0 lg:w-2/3">
             <div class="relative flex flex-col items-center justify-center w-full h-full p-20 mr-5 rounded-lg">
               <svg
                 class="absolute w-full h-full text-gray-100 fill-current"
@@ -31,11 +31,11 @@ const Feature = () => {
                 <Lottie animationData={a} loop={true} />
               </div>
 
-              <h4 class="relative mt- text-lg font-bold">World’s best Chef</h4>
+              <h4 class="relative mt- text-base font-bold">
+                World’s best Chef
+              </h4>
               <p class="relative mt-2 text-sm text-center text-gray-600">
-                The best chef is subjective and dependent on personal
-                preferences, combining skill, creativity, passion, and
-                experience to excel.
+                Celebrating the world's best chefs.
               </p>
               <a
                 href="#_"
@@ -46,7 +46,7 @@ const Feature = () => {
             </div>
           </div>
 
-          <div class="w-full max-w-md p-4 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-2/3">
+          <div class="w-full max-w-md p-4 mx-auto mb-0 sm:mb-8 lg:mb-0 lg:w-2/3 text-center">
             <div class="relative flex flex-col items-center justify-center w-full h-full p-20 mr-5 rounded-lg">
               <svg
                 class="absolute w-full h-full text-gray-100 fill-current"
@@ -62,24 +62,22 @@ const Feature = () => {
               <div className="relative w-24 h-24">
                 <Lottie animationData={b} loop={true} />
               </div>
-              <h4 class="relative mt- text-lg font-bold">
+              <h4 class="relative md:mt-2 text-base font-bold">
                 Natural ingredients
               </h4>
               <p class="relative mt-2 text-sm text-center text-gray-600">
-                The natural ingredients theory emphasizes the use of
-                unprocessed, whole foods to promote health and wellness in the
-                body.
+                Healthy and wholesome.
               </p>
               <a
                 href="#_"
-                class="relative flex mt-2 text-sm font-medium text-blue-500 underline"
+                class="relative flex md:mt-2 text-sm font-medium text-blue-500 underline"
               >
                 Learn More
               </a>
             </div>
           </div>
 
-          <div class="w-full max-w-md p-4 mx-auto mb-16 lg:mb-0 lg:w-2/3">
+          <div class="w-full max-w-md p-4 mx-auto sm:mb-8 lg:mb-0 lg:w-2/3">
             <div class="relative flex flex-col items-center justify-center w-full h-full p-20 mr-5 rounded-lg">
               <svg
                 class="absolute w-full h-full text-gray-100 fill-current"
@@ -95,13 +93,11 @@ const Feature = () => {
               <div className="relative w-24 h-24">
                 <Lottie animationData={c} loop={true} />
               </div>
-              <h4 class="relative mt- text-lg font-bold">
+              <h4 class="relative md:mt-2 text-lg font-bold">
                 Ground beef & Low fat
               </h4>
               <p class="relative mt-2 text-sm text-center text-gray-600">
-                The low-fat theory suggests using lean ground beef to reduce
-                overall fat intake and improve heart health and weight
-                management.
+                Healthy ground beef recipes with low-fat ingredients.
               </p>
               <a
                 href="#_"

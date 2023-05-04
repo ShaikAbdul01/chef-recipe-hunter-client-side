@@ -10,7 +10,7 @@ const LoginLayout = () => {
       return <LoadingSpinner></LoadingSpinner>;
     }
   return (
-    <div>
+    <div className="">
       <Header></Header>
       <Outlet></Outlet>
       <Footer></Footer>

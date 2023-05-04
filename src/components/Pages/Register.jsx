@@ -81,10 +81,10 @@ const Register = () => {
     <div className="">
       <form
         onSubmit={handleRegister}
-        className="hero min-h-screen bg-base-200 mt-10"
+        className=" my-container hero min-h-screen bg-base-200 mt-10"
       >
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 my-8">
-          <h1 className="text-xl font-bold">Register</h1>
+          <h1 className="text-xl font-bold text-center mt-4">Register</h1>
           <div className="card-body">
             <div className="form-control">
               <label className="label">
@@ -135,7 +135,7 @@ const Register = () => {
               />
             </div>
             <hr />
-            <div className="mt-4">
+            <div className="mt-4 ml-16">
               <button
                 onClick={handleGoogle}
                 type="button"

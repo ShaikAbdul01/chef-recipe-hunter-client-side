@@ -2,8 +2,8 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 const Reviews = () => {
   return (
-    <div className="mb-10">
-      <h2 className="text-3xl font-bold mt-10">REVIEWS USER</h2>
+    <div className="lg:mb-10">
+      <h2 className="text-3xl font-bold mt-10 text-center">USER REVIEW</h2>
       <Marquee className="">
         <div className="m-16">
           <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-10 px-16 mb-24">
