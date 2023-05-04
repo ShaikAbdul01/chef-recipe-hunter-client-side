@@ -2,7 +2,7 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 const Reviews = () => {
   return (
-    <div className="lg:mb-10">
+    <div className="lg:mb-10 my-container">
       <h2 className="text-3xl font-bold mt-10 text-center">USER REVIEW</h2>
       <Marquee className="">
         <div className="m-16">

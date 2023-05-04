@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 // import { BeakerIcon } from "@heroicons/react/24/solid";
 const Footer = () => {
   return (
-    <>
-      <footer className="footer p-10 bg-base-200 text-base-content grid-2 grid gap-5 md:grid-cols-3 lg:grid-cols-4 mx-auto text-center shadow-xl mt-10">
+    <div className="my-container">
+      <footer className="footer p-20 bg-base-200 text-base-content grid-2 grid gap-5 md:grid-cols-3 lg:grid-cols-4 mx-auto text-center shadow-xl mt-10">
         <div>
           <span className="footer-title">Company</span>
           <a className="link link-hover">About us</a>
@@ -102,7 +102,7 @@ const Footer = () => {
           </p>
         </div>
       </footer>
-      <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300 mb-16">
+      <footer className="footer px-16 py-8 border-t bg-base-200 text-base-content border-base-300 mb-10">
         <div className="items-center grid-flow-col">
           <h3 className="font-bold text-2xl">Budget Bytes</h3>
           <br />
@@ -145,7 +145,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 };
 
