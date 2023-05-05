@@ -19,10 +19,11 @@ const Login = () => {
   const location = useLocation();
   const emailRef = useRef();
 
-  const from = location.state?.from?.pathname || "/chef";
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-
+  
+  const from = location.state?.from?.pathname || "/chef";
+  
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
