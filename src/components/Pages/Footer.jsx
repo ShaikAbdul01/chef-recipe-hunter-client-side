@@ -104,7 +104,7 @@ const Footer = () => {
       </footer>
       <footer className="footer px-16 py-8 border-t bg-base-200 text-base-content border-base-300">
         <div className="items-center grid-flow-col">
-          <h3 className="font-bold text-2xl">Budget Bytes</h3>
+          <h3 className="font-bold text-2xl font-mono">BD Chef Hub</h3>
           <br />
         </div>
         <div className="md:place-self-center md:justify-self-end">

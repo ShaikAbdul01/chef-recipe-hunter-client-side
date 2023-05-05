@@ -2,7 +2,8 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 const Reviews = () => {
   return (
-    <div className=" my-container "><hr/>
+    <div className=" my-container ">
+      <hr />
       <h2 className="text-3xl font-bold mt-10 text-center">USER REVIEW</h2>
       <Marquee speed={80} className="">
         <div className="m-16 border-4 border-x-cyan-500 hover:border-y-cyan-500">
@@ -74,7 +75,8 @@ const Reviews = () => {
             </div>
           </div>
         </div>
-      </Marquee><hr />
+      </Marquee>
+      <hr />
     </div>
   );
 };

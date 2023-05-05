@@ -16,14 +16,14 @@ const Header = () => {
       });
   };
   return (
-    <div className=" bg-gray-100 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 rounded-full mt-4 text-center">
+    <div className=" bg-gray-100 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 rounded-full mt-4 text-center border-2 hover:border-sky-600">
       <div className="relative flex items-center justify-between">
         {/* Logo Section */}
         <Link to="/" className="inline-flex items-center">
-          {/* <FaHotjar className="h-6 w-6 text-blue-500" /> */}
-          <img className="w-14 h-14" src={a} alt="" srcset="" />
-          <p className="ml-2 text-xl font-bold tracking-wide text-gray-800">
-            Budget Bytes
+          <FaHotjar className="h-6 w-6 text-blue-500" />
+          {/* <img class="w-10 h-10 rounded-full" src={a} alt="logo"></img> */}
+          <p className="ml-2 text-xl font-bold tracking-wide text-gray-800 font-mono">
+          BD Chef Hub
           </p>
         </Link>
 
@@ -108,7 +108,7 @@ const Header = () => {
                     <Link to="/" className="inline-flex items-center">
                       <FaHotjar className="h-6 w-6 text-blue-500" />
                       <p className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase ">
-                        Budget Bytes
+                      BD Chef Hub
                       </p>
                     </Link>
                   </div>
